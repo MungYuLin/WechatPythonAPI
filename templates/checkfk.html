@@ -1,0 +1,41 @@
+$def with(fkcontent)
+<style type="text/css">
+    table.gridtable {
+        font-family: verdana, arial, sans-serif;
+        font-size: 11px;
+        color: #333333;
+        border-width: 1px;
+        border-color: #666666;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    table.gridtable th {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #dedede;
+    }
+
+    table.gridtable td {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #ffffff;
+    }
+</style>
+<table class='gridtable'>
+    <tr>
+        <th>序号</th>
+        <th>时间</th>
+        <th>反馈内容</th>
+    </tr>
+    $for item in fkcontent:
+    <tr>
+        <td id="tdstyle">$item.id</td>
+        <td id="tdstyle">$item.time</td>
+        <td id="tdstyle">$item.fk_content</td>
+    </tr>
+</table>
